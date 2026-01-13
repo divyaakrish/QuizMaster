@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Full screen background */
+body{
+    min-height: 100vh;
+    background: 
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main quiz card */
+.quiz-container{
+    width: 90%;
+    max-width: 420px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+/* Title */
+.quiz-container h1{
+    font-size: 28px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* Question */
+#question{
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+/* Options grid */
+.options{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+/* Option buttons */
+.option{
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.option:hover{
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #7f8cff, #8f5cff);
+}
+
+/* Next button */
+#nextBtn{
+    margin-top: 18px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#nextBtn:hover{
+    transform: scale(1.1);
+}
+
+/* Score */
+#score{
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffeb3b;
+}
+
+/* Mobile responsive */
+@media(max-width:500px){
+    .quiz-container{
+        padding: 20px;
+    }
+    .quiz-container h1{
+        font-size: 24px;
+    }
+}
